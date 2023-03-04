@@ -1,0 +1,55 @@
+2a60927148abd1d33b818b535e306557
+::res://::1677950702
+default_env.tres::Environment::6031678834762891061::1677950601::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1674764874::0::1::::<><>::
+icon.png::CompressedTexture2D::8959317258202826261::1674345404::1677947688::1::::<><>::
+LICENSE.md::TextFile::-1::1674764871::0::1::::<><>::
+omnisharp.json::JSON::-1::1674772557::0::1::::<><>::
+::res://addons/::1674773802
+::res://addons/gd-blender-3d-shortcuts/::1675463739
+plugin.cfg::TextFile::-1::1674765231::0::1::::<><>::
+plugin.gd::GDScript::-1::1677947467::0::1::::<>EditorPlugin<>::
+Utils.gd::GDScript::-1::1677947467::0::1::::<>RefCounted<>::
+::res://addons/godot-git-plugin/::1674705901
+plugin.cfg::TextFile::-1::1674705901::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1674705901::0::1::::<><>::
+::res://addons/godot-git-plugin/osx/::1674705901
+::res://addons/godot-git-plugin/osx/release/::1674705901
+::res://addons/godot-git-plugin/win64/::1674705901
+::res://addons/godot-git-plugin/win64/release/::1674705901
+::res://addons/godot-git-plugin/x11/::1674705901
+::res://addons/godot-git-plugin/x11/release/::1674705901
+::res://addons/key_shortcut_creator/::1674766451
+KeyGrabberButton.gd::GDScript::-1::1677947467::0::1::::<>Button<>::
+KeyShortcutCreator.gd::GDScript::-1::1677947467::0::1::::<>Window<>::
+KeyShortcutCreatorDialog.tscn::PackedScene::-1::1677947467::0::1::::<><>::res://addons/key_shortcut_creator/KeyShortcutCreator.gd<>res://addons/key_shortcut_creator/KeyGrabberButton.gd
+key_shortcut_creator_plugin.gd::GDScript::-1::1677947467::0::1::::<>EditorPlugin<>::
+plugin.cfg::TextFile::-1::1674766418::0::1::::<><>::
+::res://assets/::1674710841
+::res://Operation Room/::1677950600
+desk.tscn::PackedScene::967341426576976119::1677949615::0::1::::<><>::uid://diwnuvhtvl86y
+Room.tscn::PackedScene::2465614728097669817::1677950600::0::1::::<><>::uid://dovb4ulgsa51c<>res://Operation Room/woodenfloor.tscn<>uid://n1t8buek1jv0
+woodenfloor.tscn::PackedScene::-1::1677947467::0::1::::<><>::res://Operation Room/assets/models/floor.glb
+::res://Operation Room/assets/::1674714008
+::res://Operation Room/assets/models/::1677947694
+fer.material::StandardMaterial3D::-1::1674776801::0::1::::<><>::
+floor.glb::PackedScene::3593212442029185814::1674774812::1677947693::1::::<><>::uid://cbjylg5s0wq3a<>uid://ifuife2k1oxf<>uid://d3ou2swo1qswg
+floor_WoodFloor044_2K_Color.png::CompressedTexture2D::4863086824706484984::1677947691::1677947694::1::::<><>::
+floor_WoodFloor044_2K_Metalness-WoodFloor044_2K_Roughness.png::CompressedTexture2D::573061534118253467::1677947692::1677947694::1::::<><>::
+floor_WoodFloor044_2K_NormalGL.png::CompressedTexture2D::9154714497869299098::1677947689::1677947694::1::::<><>::
+Material_001.material::StandardMaterial3D::-1::1674774928::0::1::::<><>::
+normal .material::StandardMaterial3D::-1::1674776801::0::1::::<><>::
+PRINCIPALOFFICEchair-63d0e325bd2cfca418b4e6fdcc091649_ImphenziaPalette01-256-Gradient.png::CompressedTexture2D::7772085614466098314::1677947693::1677947694::1::::<><>::
+PRINCIPALOFFICEchair-63d0e325bd2cfca418b4e6fdcc091649_ImphenziaPalette01-256-Gradient_1.png::CompressedTexture2D::3186868608388869423::1677947693::1677947694::1::::<><>::
+PRINCIPALOFFICEchair.fbx::PackedScene::2444298927766751167::1654164653::1677947693::1::::<><>::uid://diy4d5opc5iwo<>uid://bln0i38xudv0r
+PRINCIPALOFFICEdesk-d3d92053639926fe4d3e38b06350050e_ImphenziaPalette01-256-Gradient.png::CompressedTexture2D::5647363713753407884::1677947693::1677947694::1::::<><>::
+PRINCIPALOFFICEdesk.fbx::PackedScene::7767015262252730882::1654164652::1677947694::1::::<><>::uid://cmpvixdlv7hpc
+::res://Operation Room/assets/models/PRINCIPALOFFICEchair.fbm/::1677947834
+ImphenziaPalette01-256-Gradient.png::CompressedTexture2D::7151004061254090579::1677947693::1677947834::1::::<><>::
+::res://Operation Room/assets/models/PRINCIPALOFFICEdesk.fbm/::1677947834
+ImphenziaPalette01-256-Gradient.png::CompressedTexture2D::6443794506784439231::1677947693::1677947834::1::::<><>::
+::res://Operation Room/assets/textures/::1677947688
+Detecitive_Office_Pack.obj::Mesh::4023538694097046830::1674764525::1677947688::1::::<><>::
+::res://player/::1677950601
+Player.gd::GDScript::-1::1677950523::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::8185371367619573902::1677950601::0::1::::<><>::res://player/Player.gd

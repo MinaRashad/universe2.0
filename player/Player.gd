@@ -1,15 +1,18 @@
-extends KinematicBody
+extends CharacterBody3D
 
 
 
-export var mouse_sensitivity := 0.04
-export var speed := 10.0;
-export var acceleration := 1;
-export var jump :=5.0;
-export var friction := 0.05
+@export var mouse_sensitivity := 0.1
+@export var speed := 10.0;
+@export var terminal_velocity := 200.0
+@export var acceleration := 1;
+@export var jump :=5.0; 
+@export var friction := 0.05
+@export var gravity := 9.8
 
-onready var head = $head
-onready var mesh = $Mesh
+@onready var head = $head
+@onready var headCollision = $Head
+
 var state = "idle"
 
 # calculate the direction based on rotation of camera
@@ -17,12 +20,12 @@ var state = "idle"
 # initial conditions
 var current_rotation = 0
 var motion = Vector3(0,0,0)
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
-	mesh.set_as_toplevel(true)
+
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,6 +50,8 @@ func _physics_process(delta):
 			state = "walking"
 		
 		motion = lerp(motion, Vector3.ZERO, friction)
+		
+		
 	elif state == "walking":
 		# determining the direction it should move
 		# the forward is the positive (same as right),
@@ -54,23 +59,36 @@ func _physics_process(delta):
 		
 		
 		motion = lerp(motion, moving_dir*speed, acceleration)
-		
-		print(motion)
 	
 		
 		if dir.length_squared() == 0 :
 			state = "idle"
 			
-			
-	move_and_slide(motion)
+	if !is_on_floor():
+
+		motion.y -= gravity*delta*10
+
+		motion.y = min(motion.y, terminal_velocity)	
+	else:
+		motion.y=-gravity
+
+
+
+	set_velocity(motion)
+	set_up_direction(Vector3(0,1,0))
+	move_and_slide()
 			
 			
 func _input(event):
 	## ToDo: Virtual reality
 	if event is InputEventMouseMotion:
-		rotate_y(deg2rad(event.relative.x*mouse_sensitivity))
-		head.rotate_x(deg2rad(-event.relative.y*mouse_sensitivity))
+		rotate_y(-deg_to_rad(event.relative.x*mouse_sensitivity))
+		head.rotate_x(-deg_to_rad(event.relative.y*mouse_sensitivity))
 		head.rotation.x = clamp(head.rotation.x,-PI/2,PI/2)
+		
+		## Rotate head collison shape as well
+		headCollision.rotate_x(-deg_to_rad(event.relative.y*mouse_sensitivity))
+		headCollision.rotation.x = clamp(head.rotation.x,-PI/2,PI/2)
 		current_rotation = rotation.y
 
 		

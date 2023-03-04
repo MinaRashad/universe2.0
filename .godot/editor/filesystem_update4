@@ -1,0 +1,4 @@
+res://default_env.tres
+res://player/Player.tscn
+res://Operation Room/Room.tscn
+res://player/Player.gd
